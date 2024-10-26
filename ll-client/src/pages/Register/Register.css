@@ -1,5 +1,6 @@
 .register-hero {
   display: flex;
+  flex-direction: column; /* Stacks elements vertically on smaller screens */
   height: 100vh;
   background-size: cover;
   background-position: center center;
@@ -8,9 +9,11 @@
 
 .outside-container {
   display: flex;
+  flex-direction: row; /* Default row layout */
   width: 100%;
-  padding: 0 20rem;
+  padding: 0 15rem;
 }
+
 .left-container,
 .right-container {
   flex-grow: 1;
@@ -20,7 +23,6 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 1.5rem;
   border-radius: 10px;
 }
 
@@ -94,7 +96,7 @@
 }
 
 .forgot-password {
-  padding-left: 62px;
+  text-align: center;
   margin-top: 27px;
   color: #797979;
   font-size: 15px;
@@ -124,4 +126,62 @@
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1015px) {
+  .outside-container {
+    flex-direction: column; /* Stack containers vertically */
+    padding: 0 2rem; /* Reduce padding */
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%; /* Ensure full width for smaller screens */
+    padding: 1rem; /* Adjust padding */
+    margin: 1rem auto;
+  }
+
+  .content h1 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content-text {
+    text-align: center;
+  }
+  .register-hero {
+    height: 100%;
+  }
+
+  .forgot-password {
+    text-align: center;
+  }
+  .left-container p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 32px; /* Reduce title font size */
+  }
+
+  .input {
+    width: 90%; /* Adjust width to fit mobile screens */
+  }
+
+  .submit-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+  }
+
+  .forgot-password {
+    padding-left: 0; /* Center-align on mobile */
+    text-align: center;
+  }
 }
