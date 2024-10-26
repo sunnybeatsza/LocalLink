@@ -19,7 +19,6 @@
 
 .content-text {
   text-align: left;
-  margin-right: 5rem;
 }
 
 .content h1 {
@@ -68,4 +67,19 @@ button:hover {
 #Logo-image {
   height: auto;
   width: 20rem;
+}
+
+@media screen and (max-width: 1015px) {
+  .content h1 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content-text {
+    text-align: center;
+  }
 }
