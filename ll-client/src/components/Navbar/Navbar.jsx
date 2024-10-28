@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import LogoImg from "../../Assets/Logo_Green2-removebg-preview.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -12,7 +13,7 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav>
+      <nav className="mobile-navbar">
         <ul className={`sidebar ${sidebarVisible ? "visible" : ""}`}>
           <li>
             <a href="#">
@@ -20,7 +21,7 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#">Logo</a>
+            <a href="#"></a>
           </li>
           <li>
             <a href="#">Cart</a>
@@ -32,9 +33,14 @@ export const Navbar = () => {
             <a href="#">About</a>
           </li>
         </ul>
-        <ul>
+        <ul className="desktop-navbar">
           <li>
-            <a href="#">Logo</a>
+            <a href="#">
+              <img src={LogoImg} alt="" id="LogoImage" />
+            </a>
+          </li>
+          <li className="hideOnMobile">
+            <a href="#">Normal Navbar</a>
           </li>
           <li className="hideOnMobile">
             <a href="#">Cart</a>

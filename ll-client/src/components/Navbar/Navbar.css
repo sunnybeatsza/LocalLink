@@ -82,3 +82,8 @@ nav li:first-child {
     display: block;
   }
 }
+
+#LogoImage {
+  height: auto;
+  width: 250px;
+}
