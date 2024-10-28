@@ -39,12 +39,7 @@ export const Navbar = () => {
           <li className="hideOnMobile">
             <a href="#">Cart</a>
           </li>
-          <li className="hideOnMobile">
-            <a href="#">Products</a>
-          </li>
-          <li className="hideOnMobile">
-            <a href="#">About</a>
-          </li>
+
           <li className="burgerIcon">
             <a href="#" onClick={toggleSidebar}>
               <MenuIcon />
