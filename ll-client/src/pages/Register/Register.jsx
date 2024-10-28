@@ -5,6 +5,7 @@ import LogoImg from "../../Assets/Logo_Green2-removebg-New.png";
 import PersonIcon from "@mui/icons-material/Person";
 import LockIcon from "@mui/icons-material/Lock";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
+import { Navbar } from "../../components/Navbar/Navbar";
 
 export const Register = () => {
   return (
@@ -12,6 +13,7 @@ export const Register = () => {
       className="register-hero"
       style={{ backgroundImage: `url(${ImgHero})` }}
     >
+      <Navbar />
       <div className="outside-container">
         {" "}
         <div className="left-container">

@@ -8,7 +8,6 @@ import "./Hero.css";
 export const Hero = () => {
   return (
     <div className="hero" style={{ backgroundImage: `url(${ImgHero})` }}>
-      <Navbar />
       <div className="content">
         <div className="content-text">
           <h1>
